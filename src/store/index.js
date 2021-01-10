@@ -72,7 +72,6 @@ export default new Vuex.Store({
           },
         })
         .then((response) => {
-          console.log(response.data.newslist[0].news);
           this.state.newsData = response.data.newslist[0].news;
           for (let i = 0; i < this.state.newsData.length; i++) {
             this.state.newsData[i].pubDate = new Date(
